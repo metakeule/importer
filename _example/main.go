@@ -52,7 +52,7 @@ func main() {
 	info, config := mkInfo(), mkConfig()
 	// here the importer is used with the same config and info settings
 	config.Importer = importer.CheckImporter(mkInfo, mkConfig)
-	_, err = (&config).Check(buildPkg.Name, fset, astFiles, &info)
+	_, err = (&config).Check(buildPkg.ImportPath, fset, astFiles, &info)
 
 	panicOnErr(err)
 

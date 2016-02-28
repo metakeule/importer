@@ -49,7 +49,7 @@ func (i imp) ImportFrom(pkgpath, srcDir string, mode types.ImportMode) (*types.P
 		return nil, err
 	}
 
-	pkg, err = i.checkfn(buildPkg.Name, fset, astFiles)
+	pkg, err = i.checkfn(buildPkg.ImportPath, fset, astFiles)
 	i.cache[pkgpath] = pkg // cache even if pkg == nil and err != nil to prevent never ending loops
 	return pkg, err
 }
