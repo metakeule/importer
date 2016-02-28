@@ -55,7 +55,7 @@ func (i imp) ImportFrom(pkgpath, srcDir string, mode types.ImportMode) (*types.P
 }
 
 // CheckImporter creates an go/types.ImporterFrom that can be used with go/types.Config.Check
-// to resolv imports that might not be installed (fixes .....)
+// to resolv imports that might not be installed (fixes https://github.com/golang/go/issues/14496)
 // It uses the given infogen and configgen callbacks to generate the desired types.Info and types.Config
 // that are used with config.Check which is called to return the types.Package.
 func CheckImporter(infogen func() types.Info, configgen func() types.Config) types.ImporterFrom {

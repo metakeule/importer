@@ -1,5 +1,5 @@
 # importer
-importer for go/types package
+importer for go/types package, fixes https://github.com/golang/go/issues/14496
 
 Documentation
 -------------
