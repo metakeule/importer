@@ -1,5 +1,8 @@
 # importer
-importer for go/types package, fixes https://github.com/golang/go/issues/14496
+importer for go/types package
+
+It makes go/types.Config.Check usable with imported packages
+that have not been installed yet (fixes https://github.com/golang/go/issues/14496)
 
 Documentation
 -------------
